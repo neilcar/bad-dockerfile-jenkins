@@ -19,8 +19,7 @@ node {
     }
     
     stage('Publish scan results') {
-        twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', image: 'demo/bad-dockerfile:latest', key: '', logLevel: 'true', timeout: 10
-    }
+        twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', image: 'demo/bad-dockerfile:latest', key: '', logLevel: 'true', timeout: 10    }
     
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
