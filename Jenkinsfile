@@ -15,11 +15,11 @@ node {
     }
 
     stage('Scan image') {
-        twistlockScan ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', compliancePolicy: 'warn', ignoreImageBuildTime: false, image: 'demo/bad-dockerfile:latest', key: '', logLevel: 'true', policy: 'warn', requirePackageUpdate: false, timeout: 10
+        twistlockScan ca: '', cert: '', compliancePolicy: 'high', dockerAddress: 'unix:///var/run/docker.sock', ignoreImageBuildTime: false, image: 'demo*', key: '', logLevel: 'true', policy: 'high', requirePackageUpdate: true, timeout: 10
     }
     
     stage('Publish scan results') {
-        twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', image: 'demo/bad-dockerfile:latest', key: '', logLevel: 'true', timeout: 10
+        twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', image: 'demo*', key: '', logLevel: 'true', timeout: 10
     }
     
     stage('Test image') {
