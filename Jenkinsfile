@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @neilcar
- Sign out
- Unwatch 1
-  Star 0  Fork 0 neilcar/docker-test
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Branch: master Find file Copy pathdocker-test/Jenkinsfile
-f2181c6  on Nov 9
-@neilcar neilcar Update Jenkinsfile
-1 contributor
-RawBlameHistory     
-45 lines (35 sloc)  1.42 KB
 node {
     def app
 
